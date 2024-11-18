@@ -4,11 +4,7 @@ public class CalcPi {
 	    // create a veriable that will get an input
 
 		int num = Integer.parseInt(args[0]);
-
-		double divider = 3.0;
-		int i;
-		//double calc = (1 - (1 / divider));
-		//System.out.print(calc);
+		double divider = 3.0;	
 		double calc = 1.0;
 		//create an if loop that makes sure the input ist zero 
 			if (num == 0){
@@ -19,35 +15,27 @@ public class CalcPi {
 			else {
 			//create a for loop that checks how big the number inputted is and adds
 			// or subtracts to the calculation according to wether the i count is even or odd
-			for (i = 1; i <= num; i++){
-
-				//calc = (calc - (1 / divider));
-				// System.out.print(" - " + (1 / divider));
+			for (int i = 1; i <= num; i++){
 				
 				if (i % 2 != 0){
-					calc -= (1/divider);
-					//System.out.print(" + " + (1 / divider) );
+					calc -= (1/divider);	
 
 				}
 				else {
 				calc += (1/divider);	
-				// System.out.print(" - " + (1 / divider));
+				
 				}
 				divider += 2 ;
-				
-
-				
+					
 			}
-		System.out.println(divider);
-		//}
 		//print the following:
 		//pi according to Java: 3.141592653589793
-       // pi, approximated:     3.140592653839794
+       // pi, approximated:     result
 	   double result = (calc*4.0) ;
 	    
 		System.out.println("pi according to Java: " + Math.PI);
 		System.out.println("pi, approximated:     " + result); 
-		//System.out.println(10%2);
+		
 	}
 	}
 }
