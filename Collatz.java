@@ -12,7 +12,7 @@ public class Collatz {
 
 			// the short mode
 			if (s1.equals("C") || s1.equals("c")){
-				System.out.println("Every one of the first " + n + " hailstone sequences reachde 1.");
+				System.out.println("Every one of the first " + n + " hailstone sequences reached 1.");
 			}
 
 				//create a for loop that starts with the number 1 and goes over the numbers of n
@@ -56,7 +56,7 @@ public class Collatz {
 
 		}
 		
-		System.out.println("Every one of the first " + n + " hailstone sequences reachde 1.");
+		System.out.println("Every one of the first " + n + " hailstone sequences reached 1.");
 
 	}
 		
