@@ -7,59 +7,59 @@ public class Collatz {
 			
 			int n = Integer.parseInt(args[0]);
 			int counter = 0 ;
-			int newN = 0 ;
-			int count1 = 0;
+			int newN = 1 ;
+			String s1 = args[1];
 
-		//create a for loop that starts with the number 1 and goes over the numbers of n
-		//and prints the steps until they reach 1
-		//create a seperate condition for the time n == 1 since it will not enter the following while
-		//condition that multiplies and divides the number according to the rules until the number reaches 1 again
-		
-		for (int i=1; i <= n; i++){
-			
-			
-			counter = 0 ;
-			
-			if (i == 1) {
-				count1 ++;
-				newN = 1;
-				while (count1 < 2){
-				if (newN % 2 == 0){
-					newN = newN/2 ; 
-				}
-				else {
-					newN = ((n*3) + 1);	
-				}
-				//after each modification to newN add 1 to the counter
-				counter++ ;
-				//check to see if newN reached 1 again , if so add 1 to count1 to exit the loop
-				if (newN == 1){
-					count1 ++;
-				}
-				System.out.print(newN + " ");
-				}
-				//System.out.println(" (" + counter + ")");
-			
+			// the short mode
+			if (s1.equals("C") || s1.equals("c")){
+				System.out.println("Every one of the first " + n + " hailstones sequences reachde 1.");
 			}
-			else {
-				while (i != 1){
+
+				//create a for loop that starts with the number 1 and goes over the numbers of n
+				//and prints the steps until they reach 1
+				//create a seperate condition for the time n == 1 since it will not enter the following while
+				//condition that multiplies and divides the number according to the rules until the number reaches 1 again
+			else{
+			for (int i=1; i <= n; i++){
+			
+				newN = i;
+				counter = 0 ;
+				
+				//make a condition for newN equales 1
+				if (newN == 1) {
 					
-					if (newN % 2 == 0){
-						newN = newN/2 ; 	
-					}
-					else {
-						newN = ((n*3) + 1);	
-					}
-
-					counter++ ;
 					System.out.print(newN + " ");
+					newN = 4;
+					counter = 1;
 				}
+				
+					while (newN != 1){
+						//print the number before changing it
+						System.out.print(newN + " ");
+						//if the number is even divide it by 2
+						if (newN % 2 == 0){
+							newN = newN/2 ; 	
+						}
+						else { //if the number is odd multiply it by 3 and add 1
+							newN = ((newN*3) + 1);	
+						}
+						//add 1 to the counter of actions you did to newN
+						counter++ ;
+					}
+					//once the number reaches 1 again it leaves the while loop so add 1 to the counter
+					//print the number 1 and the counter of actions
+					counter++ ;
+					System.out.println( 1 + " (" + counter + ")");
+
 			}
 			
-			System.out.println("(" + counter + ")");
+
 		}
+		
+		System.out.println("Every one of the first " + n + " hailstones sequences reachde 1.");
 
 	}
 		
 	}
+
 
