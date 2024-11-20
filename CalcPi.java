@@ -14,7 +14,7 @@ public class CalcPi {
 
 			for (int i = 0; i <= num; i++){
 				
-					double calc = (divisor/((2*i)+1));	
+					double calc = divisor/((2*i)+1);	
 					sum += calc;	
 					divisor *= -1;
 				
